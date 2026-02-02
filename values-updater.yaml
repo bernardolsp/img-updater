@@ -1,3 +1,7 @@
 crds:
   install: true
 namespaceOverride: argocd
+
+extraArgs:
+  - --interval
+  - 30s

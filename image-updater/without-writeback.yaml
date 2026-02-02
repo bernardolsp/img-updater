@@ -21,7 +21,7 @@ spec:
   # Global update settings
   commonUpdateSettings:
     updateStrategy: "semver"
-    forceUpdate: false
+    forceUpdate: true
 
   # Update the ArgoCD Application resource directly (stateless)
   # This does NOT write to Git

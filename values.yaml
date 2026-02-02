@@ -2,7 +2,3 @@ global:
   domain: localhost:8080
 server:
   insecure: true
-
-extraArgs:
-  - --interval
-  - 30s
