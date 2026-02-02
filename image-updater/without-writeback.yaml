@@ -4,24 +4,24 @@ metadata:
   name: version-demo-no-writeback
   namespace: argocd
 spec:
+  namespace: argocd
   # Select which Applications this ImageUpdater manages
   applicationRefs:
     - namePattern: "version-demo"
+      # Configuration for specific images
+      images:
+        - alias: "version-demo"
+          imageName: "docker.io/devlopesbernardo/version-demo"
+          # Map the image tag to the helm value 'image.tag'
+          manifestTargets:
+            helm:
+              name: "image.repository"
+              tag: "image.tag"
 
   # Global update settings
   commonUpdateSettings:
     updateStrategy: "semver"
     forceUpdate: false
-
-  # Configuration for specific images
-  images:
-    - alias: "version-demo"
-      imageName: "docker.io/myuser/version-demo"
-      # Map the image tag to the helm value 'image.tag'
-      manifestTargets:
-        helm:
-          name: "image.repository"
-          tag: "image.tag"
 
   # Update the ArgoCD Application resource directly (stateless)
   # This does NOT write to Git
