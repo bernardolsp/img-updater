@@ -30,6 +30,3 @@ spec:
       repository: "git@github.com:bernardolsp/img-updater.git"
       branch: "main"
       writeBackTarget: "helm/values.yaml"
-      commitMessage: "chore(deps): update version-demo to {{ .NewTag }}"
-      user: "ArgoCD Image Updater"
-      email: "argocd-image-updater@example.com"
