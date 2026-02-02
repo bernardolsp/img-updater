@@ -6,15 +6,12 @@ image:
   repository: docker.io/devlopesbernardo/version-demo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.0.0"
-
+  tag: "v1.2.1"
 nameOverride: ""
 fullnameOverride: ""
-
 service:
   type: ClusterIP
   port: 80
-
 resources:
   limits:
     cpu: 100m
@@ -22,9 +19,6 @@ resources:
   requests:
     cpu: 10m
     memory: 32Mi
-
 nodeSelector: {}
-
 tolerations: []
-
 affinity: {}
