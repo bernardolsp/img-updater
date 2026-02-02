@@ -3,3 +3,6 @@ global:
 server:
   insecure: true
 
+extraArgs:
+  - --interval
+  - 30s
