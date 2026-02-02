@@ -27,6 +27,6 @@ spec:
   writeBackConfig:
     method: "git"
     gitConfig:
-      repository: "git@github.com:bernardolsp/img-updater.git"
+      repository: "github.com/bernardolsp/img-updater.git"
       branch: "main"
       writeBackTarget: "helm/values.yaml"
