@@ -20,7 +20,7 @@ def get_version():
     Root endpoint that returns version information.
     This is used to demonstrate the image update process.
     """
-    version = os.getenv("APP_VERSION", "v1.0.0")
+    version = os.getenv("APP_VERSION", "v1.2.112321")
     pod_name = os.getenv("HOSTNAME", "local-dev")
     env = os.getenv("ENV", "development")
     
