@@ -16,7 +16,7 @@ spec:
   # Configuration for specific images
   images:
     - alias: "version-demo"
-      imageName: "docker.io/myuser/version-demo"
+      imageName: "docker.io/devlopesbernardo/version-demo"
       # Map the image tag to the helm value 'image.tag'
       manifestTargets:
         helm:
@@ -27,11 +27,9 @@ spec:
   writeBackConfig:
     method: "git"
     gitConfig:
-      # Change this to your repository
-      repository: "git@github.com:myorg/my-version-demo-repo.git"
+      repository: "git@github.com:bernardolsp/img-updater.git"
       branch: "main"
-      # Update the values.yaml file in the helm directory
-      writeBackTarget: "helmvalues:./helm/values.yaml"
+      writeBackTarget: "helm/values.yaml"
       commitMessage: "chore(deps): update version-demo to {{ .NewTag }}"
       user: "ArgoCD Image Updater"
       email: "argocd-image-updater@example.com"
