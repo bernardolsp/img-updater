@@ -6,7 +6,7 @@ image:
   repository: docker.io/devlopesbernardo/version-demo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v1.2.1"
+  tag: "v1.6.1"
 nameOverride: ""
 fullnameOverride: ""
 service:
